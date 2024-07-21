@@ -110,13 +110,13 @@
             android:layout_width="130dp"
             android:layout_height="167dp"
             android:contentDescription="@string/clients_image_desc"
-            android:src="@drawable/IconoVenta" />
+            android:src="@drawable/venta" />
 
         <Button
             android:id="@+id/btnVentas"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:onClick="registro_producto"
+            android:onClick="realizar_venta"
             android:text="@string/venta" />
     </LinearLayout>
 

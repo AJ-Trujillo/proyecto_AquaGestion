@@ -12,30 +12,31 @@
         android:id="@+id/background"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="@drawable/fondo_general"
         android:importantForAccessibility="no"
         android:scaleType="centerCrop"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:background="@drawable/fondo_general"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Contenedor principal con fondo semi-transparente -->
-
     <LinearLayout
+        android:id="@+id/linearLayout3"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="32dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="17dp"
         android:autofillHints=""
         android:background="#2FFFFFFF"
         android:orientation="vertical"
         android:padding="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.421"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.261">
+        app:layout_constraintTop_toTopOf="parent">
 
         <!-- Título de Registro de Producto -->
         <TextView
@@ -114,6 +115,28 @@
             android:textColorHint="#5C5454"
             tools:ignore="Autofill,VisualLintTextFieldSize" />
 
+        <!-- Campo para visualizar la imagen subida -->
+        <ImageView
+            android:id="@+id/ivProductImage"
+            android:layout_width="321dp"
+            android:layout_height="120dp"
+            android:layout_marginBottom="16dp"
+            android:background="#E0E0E0"
+            android:scaleType="centerCrop"
+            tools:ignore="ContentDescription,ImageContrastCheck" />
+
+        <!-- Botón para subir imagen -->
+        <Button
+            android:id="@+id/btnSubirImagen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/azul"
+            android:text="@string/btn_subir_imagen"
+            android:textColor="#212121"
+            app:cornerRadius="5dp"
+            tools:ignore="ButtonStyle" />
+
         <!-- Botones de Registrar y Cancelar -->
         <LinearLayout
             android:layout_width="match_parent"
@@ -145,38 +168,6 @@
 
         </LinearLayout>
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="340dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="40dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="80dp"
-            android:layout_weight="1"
-            android:background="@drawable/contenedor_login"
-            app:srcCompat="@drawable/baseline_person_24"
-            tools:ignore="ImageContrastCheck" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="200dp"
-            android:layout_height="25dp"
-            android:layout_weight="1"
-            android:textAlignment="center"
-            android:textColor="#607D8B"
-            android:textSize="18sp"
-            tools:ignore="TextSizeCheck" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

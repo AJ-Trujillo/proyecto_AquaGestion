@@ -53,7 +53,7 @@ public class Activity_lista_Productos extends AppCompatActivity {
         btnAddProduct.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Activity_lista_Productos.this, Activity_agregar_Producto.class);
+                Intent intent = new Intent(Activity_lista_Productos.this, Activity_registrarProducto.class);
                 startActivity(intent);
             }
         });
